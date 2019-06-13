@@ -8,7 +8,7 @@ LOGGER = LOG.create_logger( __name__ )
 class MyFirstSkill( MycroftSkill ):
 
     def __init__( self ):
-        super( MyFirstSkill, self ).__init__( name="SchlattCoinSkill" )
+        super( MyFirstSkill, self ).__init__( name="schlattcoinskill" )
         LOGGER.info( "__init__" )
 
     @intent_handler( IntentBuilder( "" ).require( "SchlattCoin" ) )
@@ -17,4 +17,4 @@ class MyFirstSkill( MycroftSkill ):
         self.speak_dialog( "ImInterested", data={} )
 
 def create_skill():
-    return SchlattCoinSkill()
+    return schlattcoinskill()
